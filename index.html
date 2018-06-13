@@ -70,6 +70,20 @@
                 font-size: 1.25em;
             }
         </style>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                var proInt = $(".pro-interests");
+                
+                //proInt.hide();
+                $(button).click(function(){
+                    //proInt.slideToggle(500);
+                    proInt.show();
+                });
+            });
+        </script>
+        
     </head>
     
     <body>
@@ -104,6 +118,21 @@
                     
                 </div>
             </main>
+            
+            <main>
+                <div class="content">
+                    <h2>Professional Interests</h2>
+                    <section class="interests">
+                        <button>Click here to see my professional interests</button>
+                        <ul class="pro-interests">
+                            <li>Learning more Java</li>
+                            <li>Learning how to do Vision Processsing</li>
+                            <li>Going to college for Cmputer Science</li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+            
         </div>
     </body>
 </html>
