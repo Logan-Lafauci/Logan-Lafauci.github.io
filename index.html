@@ -69,6 +69,18 @@
             .interests header {
                 font-size: 1.25em;
             }
+            #teamPic{
+                margin-Top:30px;
+                border-radius: 10px;
+            }
+            button{
+                background-color:#80E;
+                color: #FFF;
+                border-radius:25px;
+                font-family:"Courier New";
+            }
+            
+            
         </style>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -76,10 +88,9 @@
             $(document).ready(function(){
                 var proInt = $(".pro-interests");
                 
-                //proInt.hide();
-                $(button).click(function(){
-                    //proInt.slideToggle(500);
-                    proInt.show();
+                proInt.hide();
+                $("button").click(function(){
+                    proInt.slideToggle();
                 });
             });
         </script>
@@ -120,6 +131,9 @@
             </main>
             
             <main>
+                <div class="sidebar">
+                    <img id="teamPic" src = "https://d2g8igdw686xgo.cloudfront.net/27893476_1522682430.7735.jpg"/>
+                </div>
                 <div class="content">
                     <h2>Professional Interests</h2>
                     <section class="interests">
@@ -127,7 +141,7 @@
                         <ul class="pro-interests">
                             <li>Learning more Java</li>
                             <li>Learning how to do Vision Processsing</li>
-                            <li>Going to college for Cmputer Science</li>
+                            <li>Going to college for Computer Science</li>
                         </ul>
                     </section>
                 </div>
