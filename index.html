@@ -50,6 +50,7 @@
                 background: rgb(245, 238, 219);
                 display: flex;
                 border-radius: 15px;
+                margin-Top: 20px;
             }
             .sidebar {
                 margin-right: 25px;
@@ -79,7 +80,11 @@
                 border-radius:25px;
                 font-family:"Courier New";
             }
-            
+            .active{
+                background-color:#FC0;
+                color:#000;
+                
+            }
             
         </style>
         
@@ -91,6 +96,7 @@
                 proInt.hide();
                 $("button").click(function(){
                     proInt.slideToggle();
+                    $("button").toggleClass("active");
                 });
             });
         </script>
@@ -142,6 +148,7 @@
                             <li>Learning more Java</li>
                             <li>Learning how to do Vision Processsing</li>
                             <li>Going to college for Computer Science</li>
+                            <li>Writing a book</li>
                         </ul>
                     </section>
                 </div>
