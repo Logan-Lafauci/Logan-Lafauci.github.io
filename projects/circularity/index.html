@@ -48,10 +48,11 @@
                 
                 // TODO 1: Declare our variables //
                 var circles, i, circle;
-                
+                var score
                 // TODO 2: Initialize our variables //
                 circles =[];
                 i=0;
+                score = 0;
                 /* 
                  * For-loops let us execute a block of code a set number of times.
                  * Using the counter variable 'i' we can keep track of how many times we have run the loop by choosing
@@ -67,21 +68,43 @@
                  */
                 for (var i = 0; i < 100; i++) {
                     // TODO 4 : YOUR CODE STARTS HERE //////////////////////////
-                    circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);//area, randomizeAlpha, addCross, borderColor, borderThickness, randomRadialProps
                     
+                    circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);//area, randomizeAlpha, addCross, borderColor, borderThickness, randomRadialProps
                     if (circle.alpha < .2) {
     	                draw.blurFilterOn(circle);
                     }
+                    
+                    circle.addEventListener("click", function(event) { 
+                        var target = event.target;
+                        event.target.velocityX *= -2;
+                        event.target.velocityY *= -2;
+                        score++;
+                        console.log(score);
+                    });
                     
                     physikz.addRandomVelocity(circle, canvas);
                     circles.push(circle);
                     view.addChild(circle);
                 }
+
+                // making a text area for the score
+                var _scoreText = new createjs.Text("Score --", "bold 15px Arial", '#000');
+                var _score = new createjs.Container();
+                _score.y = 20; // moves the score to y=20 (down);
+                _score.textField = _scoreText;
+                _score.addChild(_scoreText);
+               // _scoreText.text = score;
+                _score.update = function (parent) {
+                    _scoreText.text = "Score: "+ score;
+                }
                 
+                
+                view.addChild(_score);
                 view.addChild(fps);
                 app.addUpdateable(fps);
+                app.addUpdateable(_score);
 
-                function update() {
+                function update() {//update function repeats ever
                     /* 
                      * For-loops also provide a convenient way to access elements of an Array one at a time.
                      * We can use the variable i (short for index) as a placeholder for the numbered index we want to access
@@ -98,20 +121,20 @@
                         
                         if (circle.x-circle.radius >= canvas.width) {//cicle on right side
                             // your code to place circle exactly off the stage at the left-side //
-                            circle.x = 0-circle.width;
+                            circle.x = 0 - circle.width;
                         } 
                         else if (circle.x+circle.radius <= 0) {//circle on left side
                             // your code to place circle exactly off the stage at the right-side //
-                            circle.x = canvas.width+circle.radius;
+                            circle.x = canvas.width + circle.radius;
                         }
                         
                         if (circle.y+circle.radius <= 0) {//circle is at top
                             // code to place circle exactly off the stage at the bottom //
-                            circle.y = canvas.height+circle.radius;
+                            circle.y = canvas.height + circle.radius;
                         } 
-                        else if ( / * test for the circle exiting the bottom * / ) {//circle is at bottom
+                        else if (circle.y-circle.radius >= canvas.height) {//circle is at bottom
                             // your code to place circle exactly off the stage at the top //
-                            
+                            circle.y = 0 - circle.radius;
                         }
                         
                         // YOUR TODO 7 CODE ENDS HERE //////////////////////////
