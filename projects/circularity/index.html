@@ -82,14 +82,17 @@
                         if(target.radius >= 15){
                         score++;
                         }
-                        else{
+                        else if(target.radius>=10){
                             score += 2;
+                        }
+                        else{
+                            score += 3;
                         }
                         //console.log(score);
                     });
                     
                     //doesnt work  dont know why
-                    circle.addEventListener("mouseenter", function(event){
+                    circle.addEventListener("mouseover", function(event){
                         
                         var target = event.target;
                         
