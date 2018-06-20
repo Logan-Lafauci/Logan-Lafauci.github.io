@@ -76,16 +76,32 @@
                     
                     circle.addEventListener("click", function(event) { 
                         var target = event.target;
-                        event.target.velocityX *= -2;
-                        event.target.velocityY *= -2;
+                        
+                        changeVelocity(target, 2);
+                        
+                        if(target.radius >= 15){
                         score++;
-                        console.log(score);
+                        }
+                        else{
+                            score += 2;
+                        }
+                        //console.log(score);
+                    });
+                    
+                    //doesnt work  dont know why
+                    circle.addEventListener("mouseenter", function(event){
+                        
+                        var target = event.target;
+                        
+                        changeVelocity(target, 10);
+                        
                     });
                     
                     physikz.addRandomVelocity(circle, canvas);
                     circles.push(circle);
                     view.addChild(circle);
                 }
+                
 
                 // making a text area for the score
                 var _scoreText = new createjs.Text("Score --", "bold 15px Arial", '#000');
@@ -103,6 +119,23 @@
                 view.addChild(fps);
                 app.addUpdateable(fps);
                 app.addUpdateable(_score);
+                
+                function changeVelocity(target, amt){
+                    var velX = target.velocityX;
+                    var velY = target.velocityY;
+                    
+                    target.velocityX *= -amt;
+                    target.velocityY *= -amt;
+                    
+                    
+                    /*
+                    //waits 2000 ms before setting th velocity back to what it originally was
+                     setTimeout(function(){
+                         target.velocityX = velX;
+                         target.velocityY = velY;
+                     }, 5000); 
+                     */
+                }
 
                 function update() {//update function repeats ever
                     /* 
@@ -121,7 +154,7 @@
                         
                         if (circle.x-circle.radius >= canvas.width) {//cicle on right side
                             // your code to place circle exactly off the stage at the left-side //
-                            circle.x = 0 - circle.width;
+                            circle.x = 0 - circle.radius;
                         } 
                         else if (circle.x+circle.radius <= 0) {//circle on left side
                             // your code to place circle exactly off the stage at the right-side //
