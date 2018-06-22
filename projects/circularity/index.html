@@ -66,7 +66,7 @@
                  *
                  * TODO 3: Here we want to run our loop 100 times to create 100 circles. What should our start and end value be?
                  */
-                for (var i = 0; i < 100; i++) {
+                for (var i = 0; i < 150; i++) {
                     // TODO 4 : YOUR CODE STARTS HERE //////////////////////////
                     
                     circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);//area, randomizeAlpha, addCross, borderColor, borderThickness, randomRadialProps
@@ -131,13 +131,13 @@
                     target.velocityY *= -amt;
                     
                     
-                    /*
+                    
                     //waits 2000 ms before setting th velocity back to what it originally was
                      setTimeout(function(){
                          target.velocityX = velX;
                          target.velocityY = velY;
                      }, 5000); 
-                     */
+                     
                 }
 
                 function update() {//update function repeats ever
