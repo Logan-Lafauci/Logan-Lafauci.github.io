@@ -74,7 +74,13 @@
                 margin-Top:30px;
                 border-radius: 10px;
             }
-            button{
+            #int-button{
+                background-color:#80E;
+                color: #FFF;
+                border-radius:25px;
+                font-family:"Courier New";
+            }
+            #wjmc-button{
                 background-color:#80E;
                 color: #FFF;
                 border-radius:25px;
@@ -92,11 +98,18 @@
         <script>
             $(document).ready(function(){
                 var proInt = $(".pro-interests");
+                var wjmc = $(".wjmc-stuff");
                 
                 proInt.hide();
-                $("button").click(function(){
+                $("#int-button").click(function(){
                     proInt.slideToggle();
-                    $("button").toggleClass("active");
+                    $("#int-button").toggleClass("active");
+                });
+                
+                wjmc.hide();
+                $("#wjmc-button").click(function(){
+                    wjmc.slideToggle();
+                    $("#wjmc-button").toggleClass("active");
                 });
             });
         </script>
@@ -110,7 +123,6 @@
                 <ul>
                     <li> <a href="index.html">Home</a> </li>
                     <li> <a href="portfolio.html">Portfolio</a></li>
-                    <li> <a href = "blog.html">Blog</a></li>
                 </ul>
             </nav>
             
@@ -144,13 +156,27 @@
                 <div class="content">
                     <h2>Professional Interests</h2>
                     <section class="interests">
-                        <button>Click here to see my professional interests</button>
+                        <button id = "int-button">Click here to see my professional interests</button>
                         <ul class="pro-interests">
                             <li>Learning more Java</li>
                             <li>Learning how to do Vision Processsing</li>
                             <li>Going to college for Computer Science</li>
                             <li>Writing a book</li>
                         </ul>
+                    </section>
+                </div>
+            </main>
+            
+            <main>
+                <div class = "sidebar">
+                    <h3>Picture not yet available</h3>
+                </div>
+                <div class = "content">
+                    <h2>Washington Journalism and Media Conference (WJMC)</h2>
+                    <section id="wjmc">
+                        <button id = "wjmc-button">Click here to see the names of my fellow correspondents from Blue Crew</button>
+                        <p class="wjmc-stuff">Iggy, Soniah, Mac, Jackson, Jeffrey, Faith, Allison, Sara, me,  Hannah, Erin, Merlin, Karlee, Kristi, Cassidy, Addie
+                        ,Griffin, Maddie, Carlie, Raquel, Katelyn, Kodee, Ryan, and of course the team mascot - Theodore (Griffin's rubber duck)!!</p>
                     </section>
                 </div>
             </main>
