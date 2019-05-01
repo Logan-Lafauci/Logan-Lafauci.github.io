@@ -116,9 +116,10 @@ var friendsCount = function(array, name){
 };
 
 var topThreeTags = function(array){
-    //go to the first person on the array.  Tak their first tag
+    //go to the first person on the array.  Take their first tag
     //go through every other person and see if their tags contain the tag.
     //record that number.  Repeat
+    let tagArr = [];
     let m_tag1Count = 0;
     let m_tag1Name = "";
     let m_tag2Count = 0;
@@ -140,38 +141,26 @@ var topThreeTags = function(array){
                 m_tag2Count = m_tag1Count;
                 m_tag1Count = compareTagCount;
                 m_tag3Name = m_tag2Name;
+                m_tag2Name = m_tag1Name;
+                m_tag1Name = compareTag;
+            }else if(compareTagCount >= m_tag2Count){
+                m_tag3Count = m_tag2Count;
+                m_tag2Count = compareTagCount;
+                m_tag3Name = m_tag2Name;
+                m_tag2Name = compareTag;
+            } else if(compareTagCount >= m_tag3Count){
+                m_tag3Count = compareTagCount;
+                m_tag3Name = compareTag;
             }
-        })
-        
-    })
-    
-    //grab all tags
-    //sort the tags into separate arrays of the same tag
-    //top 3 tag array lengths are the winners
-    
-    //grab all tags
-    //find the 3 most recurring tags
-    //return the 3 tags
-    /*
-    let commonTags = [];
-    let allTags = [];
-    let tagCount1 = 0;
-    let tagCount2 = 0;
-    let tagCount3 = 0;
-    let m_tag = "";
-    let hasSet = false;
-    _.each(array, function(person){
-        _.each(person.tags, function(tag){
-            allTags.push(tag);    
         });
+        
     });
-    _.each(allTags, function(tag){
-        if(!hasSet) tag = m_tag;
-        if(m_tag === tag){
-            tagCount1++;
-        }
-    });
-    */
+    
+    tagArr.push(m_tag1Name);
+    tagArr.push(m_tag2Name);
+    tagArr.push(m_tag3Name);
+    
+    return tagArr;
 };
 
 var genderCount = function(array){
