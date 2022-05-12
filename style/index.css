@@ -1,0 +1,56 @@
+body {
+    background-color: #191a1c;
+    padding: 10px;
+}
+
+/* navigation menu */
+nav {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+}
+
+/* main container area beneath menu */
+/* 
+h2 {
+    color: #1dba04;
+} */
+
+.content {
+    background-color: #303030;
+    color: #fff;
+    flex: 1;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+
+/* Portfolio styles */
+#portfolio {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#portfolio li {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+    background: #eee;
+} 
+
+#portfolio a {
+    text-decoration: none;
+    color: #454545;
+}
