@@ -15,100 +15,124 @@
     </head>
     
     <body>
-        <div class="container-fluid">
-            <nav>
-                <h2>Hayley Roberts</h2>
+        <nav class="navbar sticky-top navbar-light mb-0">
+            <h2>Hayley Roberts</h2>
+            <div class="row">
+                <a class="nav-item m-2" style="text-decoration:underline;" href="index.html"><h4>Home</h4></a>
+                <a class="nav-item m-2" href="portfolio.html"><h4>Portfolio</h4></a>
+            </div>
+        </nav>
 
-                <div>
-                    <a href="index.html" class="m-1" style="text-decoration:underline">Home</a>
-                    <a href="portfolio.html" class="m-1">Portfolio</a>
-                </div>
-                
-            </nav>
-            
+        <div>
             <!-- About -->
             <div class="content">  
-                <h2>About</h2>
-                <p>I am a Computer Science major at Louisiana State University, and I am set to graduate in May 2023. I plan to be a full-stack developer and hope to one day build my own business.</p>
+                <h1>Hello!</h1>
+                <p>I'm Hayley Roberts, a Software Developer from Louisiana.
+                    <br>I am set to graduate from Louisiana State University in May 2023 with a Computer Science Degree.
+                    <br>I plan to become a full-stack developer and hope to one day build my own business.</p>
             </div>
 
             <!-- Skills -->
             <div class="content">
-                <h2>Skills</h2>
+                <h1>Skills</h1>
 
-                <div class="row ml-0">
-                    <section class="mr-5">
-                        <h6>Languages</h6>
-                        <ul class="languages">
-                            <li>Java</li>
-                            <li>JavaScript</li>
-                            <li>Python</li>
-                            <li>Dart</li>
-                            <li>Scheme</li>
-                            <li>HTML and CSS</li>
-                        </ul>
-                    </section>
+                <br>
+                <div class=" row">
 
-                    <section class="mr-5">
-                        <h6>Integrated Development Environments</h6>
-                        <ul class="ides">
-                            <li>Eclipse</li>
-                            <li>Netbeans</li>
-                            <li>Microsoft Visual Studio Code</li>
-                            <li>Android Studio</li>
-                            <li>Arduino IDE</li>
-                            <li>IDLE</li>
-                            <li>Flutter</li>
-                        </ul>
-                    </section>
-
-                    <section class="mr-5">
-                        <h6>Other</h6>
-                        <ul>
-                            <li>Microsoft Office</li>
-                        </ul>
-                    </section>
+                    <div class="col-6" style="align-self: center;">
+                        <h4>Languages</h4>
+                    </div>
+                    
+                    <div class="col-6">
+                        <p>Java, Python, Dart<br>
+                            HTML, CSS, JavaScript<br>
+                            PHP, SQL, MySQL</p>
+                    </div>
+                    
                 </div>
-               
 
+
+                <br>
+
+                <div class=" row">
+
+                    <div class="col-6" style="align-self: center;">
+                        <h4>Frameworks</h4>
+                    </div>
+                    
+
+                    <div class="col-6">
+                        <p>Bootstrap 4<br>
+                            Flutter</p>
+                    </div>
+
+                   
+                </div>
+
+                <br>
+
+
+                <div class="row">
+                    <div class="col-6" style="align-self: center;">
+                        <h4>Integrated Development Environments</h4>
+                    </div>
+                    <div class="col-6">
+                        <p>Eclipse, Netbeans, PHPStorm<br>
+                            Microsoft Visual Studio, Android Studio<br>
+                            Arduino IDE, IDLE (for Python)</p>
+                    </div>
+                    
+                    
+    
+                </div>
                
             </div>
         
             <!-- Education -->
             <div class="content">
-                <h2>Education</h2>
+                <h1>Education</h1>
 
-                <section class="mr-5">
-                    <h4>Louisiana State University</h4>
-                    <p>Bachelor's Degree in Computer Science</p>
-                    <p>Minor in Math</p>
-                    <p>Software Engineering</p>
-                    <p>Graduating May 2023</p>
-                </section>
+                <br>
+
+                <div class="row">
+
+                    <div class="col-6" style="align-self: center;">
+                        <h4>Louisiana State University</h4>
+                    </div>
+                    
+                    <div class="col-6">
+                        <p>Bachelor's Degree in Computer Science <br>
+                            Concentration in Software Engineering<br>
+                            Minor in Math<br>
+                            Graduating May 2023</p>
+                    </div>
+                    
+                </div>
 
             </div>
 
             <!-- Contact -->
-            <div class="content">
-                <h2>Contact</h2>
-                
-                <div class="row ml-0">
-                    <span class="material-icons">email</span>
-                    <p> hayley.roberts39@ymail.com</p>
-                </div>
+            <div class="contact">
+                <h1>Contact</h1>
 
-                <div class="row ml-0">
-                    <span class="material-icons">email</span>
-                    <p> hrobe39@lsu.edu</p>
-                </div>
+                <div class="row">
+                    <div class="col ml-0" style="display: flex;">
+                        <span class="material-icons m-0">email</span> 
+                        <p class="ml-1">hayley.roberts39@ymail.com</p>
+                    </div>
 
-                <div class="row ml-0">
-                    <svg id="i-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="32" height="32">
-                        <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z"></path>
-                    </svg>
-                    <p> BOOKSHayley</p>
-                </div>
-                
+                    <div class="col ml-0" style="display: flex;">
+                        <span class="material-icons m-0">email</span> 
+                        <p class="ml-1">hrobe39@lsu.edu</p>
+                    </div>
+
+                    <div class="col ml-0" style="display: flex;">
+                        <svg id="i-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="32" height="32">
+                            <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z"></path>
+                        </svg> 
+                        <a href="https://github.com/BOOKSHayley"><p class="ml-1" style="color: #fff;">BOOKSHayley</p></a>
+                    </div>
+                </div>    
             </div>
             
         </div>

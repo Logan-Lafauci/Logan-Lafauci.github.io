@@ -1,8 +1,9 @@
 body {
-    /* background-color: #191a1c; */
-    background: linear-gradient(to bottom right, #8860D0, #5680E9, #84CEEB, #5AB9EA, #C1C8E4, #8860D0);
+    background-color: #38405c;
+    /* background: linear-gradient(to bottom right, #8860D0, #5680E9, #84CEEB, #5AB9EA, #C1C8E4, #8860D0); */
+    background: linear-gradient(to bottom right, #8860D0, #5680E9,#5AB9EA, #8860D0);
     background-attachment: fixed;
-    padding: 10px;
+    margin-bottom: -10px;
 }
 
 /* navigation menu */
@@ -13,22 +14,42 @@ nav {
     padding: 10px;
     justify-content: space-between;
     color: #fff;
+    background-color:#5AB9EA;
 }
 
 nav a {
     color: #fff;
 }
 
+nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
 /* main container area beneath menu */
 
 .content {
     background-color: rgba(58, 41, 89, 0.6);
     color: #fff;
-    flex: 1;
     padding: 15px;
     margin-bottom: 10px;
-    border-radius: 10px;
+    display: grid;
+    min-height: 300px;
+    text-align: center;
 }
+
+.contact {
+    background-color: rgba(58, 41, 89, 0.6);
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.separation {
+    border-bottom: 1px solid #C1C8E4;
+}
+
+
 
 /* Portfolio styles */
 #portfolio {
