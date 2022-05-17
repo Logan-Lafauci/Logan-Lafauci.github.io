@@ -73,3 +73,37 @@ nav a:hover {
     /* color: #454545; */
     color: #000;
 }
+
+.projLangBtn {
+    border-radius: 15px;
+}
+
+.projectRow {
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.projectLink {
+    background-color: #C1C8E4;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projectLink:hover {
+    background: #eee;
+}
+
+.projectImage {
+    height: 100%;
+    width: 25%;
+}
+
+.projectSection {
+    width: 30%;
+}

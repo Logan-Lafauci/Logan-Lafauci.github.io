@@ -32,18 +32,96 @@
 
             <div class="content">
                 <h4>Personal Projects</h4>
-
+                
             </div>
+
+            <!-- <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#opSpark" aria-expanded="false" aria-controls="opSpark">
+                                Projects from Operation Spark (2018)
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="opSpark" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
 
             <div class="content">
                 <h4>Projects from Operation Spark (2018)</h4>
-                <ul id="portfolio">
-                    <!-- <li><a href="projects/' + localProjects[i].name + '/">' + localProjects[i].title + ' : ' + localProjects[i].description + '</a></li> -->
+
+                <!-- Maybe change all this. Make each content div a dropdown. Then each project is a row with information. Not buttons -->
+                <div class="row projectRow">
+                    <div onclick="window.location.href = 'projects/bouncing-box/index.html'" class="projectLink row col-5">
+                        <img src="images/no-image.png" class="projectImage projectSection">
+                        <div class="projectSection">
+                            <h6>Bouncing Box</h6>
+                            <p>My first web game.</p> 
+                        </div>
+                        <div class="projectSection">
+                            <button class="projLangBtn btn btn-secondary" type="button" disabled>HTML</button>
+                            <button class="projLangBtn btn btn-secondary" type="button" disabled>CSS</button>
+                            <button class="projLangBtn btn btn-secondary" type="button" disabled>JavaScript</button>
+                        </div>
+                    </div>
+
+                    <div onclick="window.location.href = 'projects/platformer/'" class="projectLink row col-5">
+                        <img src="images/no-image.png" class="projectImage projectSection">
+                        <div class="projectSection">
+                            <h6>Platformer</h6>
+                            <p>My first platformer game with assets from Operation Spark</p> 
+                        </div>
+                        <div class="projectSection">
+                            <button class="projLangBtn btn btn-secondary" type="button" disabled>HTML</button>
+                            <button class="projLangBtn btn btn-secondary" type="button" disabled>CSS</button>
+                            <button class="projLangBtn btn btn-secondary" type="button" disabled>JavaScript</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row projectRow">
+                    <div onclick="window.location.href = 'projects/circularity/index.html'" class="projectLink row col-5">
+                        <img src="images/no-image.png" class="projectImage projectSection">
+                        <div class="projectSection">
+                            <h6>Circularity</h6>
+                            <p>Calming background of moving circles </p> 
+                        </div>
+                        <div class="projectSection">
+                            <button class="projLangBtn btn btn-secondary" type="button" disabled>HTML</button>
+                            <button class="projLangBtn btn btn-secondary" type="button" disabled>CSS</button>
+                            <button class="projLangBtn btn btn-secondary" type="button" disabled>JavaScript</button>
+                        </div>
+                    </div>
+
+                    <div onclick="window.location.href = 'projects/runtime/'" class="projectLink row col-5">
+                        <img src="images/no-image.png" class="projectImage projectSection">
+                        <div class="projectSection">
+                            <h6>Runtime</h6>
+                            <p> My first side-scroller game. Many of the images were made in Microsoft Paint</p> 
+                        </div>
+                        <div class="projectSection">
+                            <button class="projLangBtn btn btn-secondary" type="button" disabled>HTML</button>
+                            <button class="projLangBtn btn btn-secondary" type="button" disabled>CSS</button>
+                            <button class="projLangBtn btn btn-secondary" type="button" disabled>JavaScript</button>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- <ul id="portfolio">
+                    <li><a href="projects/' + localProjects[i].name + '/">' + localProjects[i].title + ' : ' + localProjects[i].description + '</a></li>
                     <li><a href="projects/bouncing-box/index.html">Bouncing Box : My first game written with HTML, CSS, and JS</a></li>
                     <li><a href="projects/platformer/">Platformer : My first platformer game with assets from Operation Spark</a></li>
                     <li><a href="projects/circularity/index.html">Circularity : Calming background of moving circles</a></li>
                     <li><a href="projects/runtime/">Runtime : My first side-scroller game. Many of the images were made in Microsoft Paint</a></li> 
-                </ul>
+                </ul> -->
             </div>
 
             <!-- Contact -->
