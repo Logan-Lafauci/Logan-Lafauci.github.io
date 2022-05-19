@@ -52,7 +52,39 @@ nav a:hover {
 
 
 /* Portfolio styles */
-#portfolio {
+
+.a-button {
+    text-align: center; 
+    line-height: 28px;
+}
+
+.portfolio-content {
+    background-color: rgba(58, 41, 89, 0.6);
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    min-height: 300px;
+    display: inline-grid;
+    align-items: center;
+    width: 100%;
+}
+
+.projectImage {
+    height: 100%;
+    width: 100%;
+}
+
+.projLangBtn {
+    border-radius: 15px;
+}
+
+
+img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+/* #portfolio {
     list-style-type: none;
     padding-left: 0;
 }
@@ -70,13 +102,11 @@ nav a:hover {
 
 #portfolio a {
     text-decoration: none;
-    /* color: #454545; */
+    /* color: #454545; 
     color: #000;
 }
 
-.projLangBtn {
-    border-radius: 15px;
-}
+
 
 .projectRow {
     flex-wrap: nowrap;
@@ -99,11 +129,18 @@ nav a:hover {
     background: #eee;
 }
 
-.projectImage {
-    height: 100%;
-    width: 25%;
-}
+
 
 .projectSection {
     width: 30%;
 }
+
+.projectDiv {
+    border: 1px solid #5AB9EA;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+hr {
+    background-color: #eee;
+} */
