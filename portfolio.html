@@ -15,7 +15,13 @@
     
     <body>
         <script src="jquery-3.6.0.js"></script>
+        <script src="bootstrap.js"></script>
         <script>
+
+            $(document).ready(function(){
+                $('.carousel').carousel({interval: 2000});
+            });
+            
 
             function reveal(paneNum){
                 if(paneNum == 1){
@@ -106,7 +112,19 @@
                             <button class="projLangBtn btn btn-outline-light" type="button">SQLite</button>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            
+                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img class="d-block w-100" src="images/moovi-pic-1.png" alt="Logo">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100" src="images/moovi-pic-2.png" alt="Profile">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img class="d-block w-100" src="images/moovi-pic-3.png" alt="Back of Movie Card">
+                                  </div>
+                                </div>
+                              </div>
                         </div>
                     </div>
                 </div>
@@ -127,6 +145,7 @@
                             <p>
                                 The project was built in Android studio.
                                 I created the database (my first) using the Room API, which uses SQLite.
+                                I also helped to create an ER Diagram using Enterprise Architecture.
                             </p>
                             <p>
                                 DrugHub is an android application for helping users remember to take their medications. 
@@ -142,7 +161,7 @@
                             <button class="projLangBtn btn btn-outline-light" type="button">SQLite</button>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            
+                            <img src="images/drughub-pic.png">
                         </div>
                     </div>
                 </div>
@@ -194,7 +213,7 @@
                             <button class="projLangBtn btn btn-outline-light" type="button">JavaScript</button>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            <img src="images/no-image.png">
+                            <img src="images/robotics-signin-pic.png">
                         </div>
                     </div>
                 </div>
