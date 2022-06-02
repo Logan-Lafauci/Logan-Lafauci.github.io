@@ -15,13 +15,8 @@
     
     <body>
         <script src="jquery-3.6.0.js"></script>
-        <script src="bootstrap.js"></script>
+        <script src="bootstrap.min.js"></script>
         <script>
-
-            $(document).ready(function(){
-                $('.carousel').carousel({interval: 2000});
-            });
-            
 
             function reveal(paneNum){
                 if(paneNum == 1){
@@ -29,6 +24,7 @@
                     $('#opSparkProjectsDiv').css('display', 'none');
                     $('#collegeProjectsDiv').css('display', 'block');
                     $('#personalProjectsDiv').css('display', 'none');
+                    $('#jobDiv').css('display', 'none');
 
                     //Activate and deactivate buttons
                     $('.show-project-button.active').toggleClass('active');
@@ -39,6 +35,7 @@
                     $('#opSparkProjectsDiv').css('display', 'none');
                     $('#collegeProjectsDiv').css('display', 'none');
                     $('#personalProjectsDiv').css('display', 'block');
+                    $('#jobDiv').css('display', 'none');
                     
                     //Activate and deactivate buttons
                     $('.show-project-button.active').toggleClass('active');
@@ -49,14 +46,24 @@
                     $('#opSparkProjectsDiv').css('display', 'block');
                     $('#collegeProjectsDiv').css('display', 'none');
                     $('#personalProjectsDiv').css('display', 'none');
+                    $('#jobDiv').css('display', 'none');
                     
                     //Activate and deactivate buttons
                     $('.show-project-button.active').toggleClass('active');
                     $('#opSparkBtn').addClass('active');
+                } else if(paneNum == 4){
+                    //Show and hide divs
+                    $('#jobDiv').css('display', 'block');
+                    $('#opSparkProjectsDiv').css('display', 'none');
+                    $('#collegeProjectsDiv').css('display', 'none');
+                    $('#personalProjectsDiv').css('display', 'none');
+                    
+                    //Activate and deactivate buttons
+                    $('.show-project-button.active').toggleClass('active');
+                    $('#jobBtn').addClass('active');
                 }
             }
         </script>
-
 
 
         <nav class="navbar sticky-top navbar-light mb-0">
@@ -73,15 +80,40 @@
                 <button type="button" id="collegeBtn" class="btn btn-outline-light active show-project-button" onclick="reveal(1)">College Class Projects</button>
                 <button type="button" id="personalBtn" class="btn btn-outline-light ml-2 show-project-button" onclick="reveal(2)">Personal Projects</button>
                 <button type="button" id="opSparkBtn" class="btn btn-outline-light ml-2 show-project-button" onclick="reveal(3)">Operation Spark Projects</button>
+                <button type="button" id="jobBtn" class="btn btn-outline-light ml-2 show-project-button" onclick="reveal(4)">Job Experience</button>
             </div>
 
             <div id="collegeProjectsDiv">
 
-                <!-- Add Research and web-scraping -->
+                <div class="portfolio-content">
+                    <div class="row title-row m-0 pl-3">
+                        <h2>LSU Research (Fall 2020 and Fall/Spring 2021)</h2>
+                    </div>
+    
+                    <div class="row pl-3">
+                        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
+                            <p>
+                                I did research for a professor at Louisiana State University. The goal of my part of the project was
+                                data gathering from specific websites to use in analysis of the weaknesses and biases prevalent in certain platforms.
+                                I learned to build a web-scraper using Python. I used BeautifulSoup to parse the HTML trees and gather the information I wanted.
+                                Selenium grabbed the HTML of dynamic pages, while the requests library did the same for static pages.
+                                It was my first attempt at web-scraping, and I managed to gather lots of information and stored it in text files.  
+                            </p>
+                            <p>
+                                The experience allowed me to use similar techniques to gather movie information for the Moovi application
+                                so we could fill our database quickly and spend more time building our MVP.
+                            </p>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Python</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">BeautifulSoup</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Selenium</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Requests</button>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="portfolio-content">
                     <div class="row title-row m-0 pl-3">
-                        <h2>Moovi  (Fall 2021)</h2>
+                        <h2>Moovi (Fall 2021)</h2>
                         <a href="https://github.com/BOOKSHayley/Moovi" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
                         <!-- <button type="button" class="btn btn-outline-light ml-2">Play</button> -->
                     </div>
@@ -112,19 +144,7 @@
                             <button class="projLangBtn btn btn-outline-light" type="button">SQLite</button>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                    <img class="d-block w-100" src="images/moovi-pic-1.png" alt="Logo">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img class="d-block w-100" src="images/moovi-pic-2.png" alt="Profile">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img class="d-block w-100" src="images/moovi-pic-3.png" alt="Back of Movie Card">
-                                  </div>
-                                </div>
-                              </div>
+                            <img src="images/moovi-pic-1.png">
                         </div>
                     </div>
                 </div>
@@ -132,7 +152,7 @@
 
                 <div class="portfolio-content">
                     <div class="row title-row m-0 pl-3">
-                        <h2>DrugHub  (Spring 2021)</h2>
+                        <h2>DrugHub (Spring 2021)</h2>
                         <a href="https://github.com/SamJones329/Medication-Reminder-Android-App" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
                     </div>
     
@@ -186,7 +206,6 @@
 
             </div>
 
-            
             <div id="personalProjectsDiv" style="display:none">
                 
                 <div class="portfolio-content">
@@ -205,8 +224,12 @@
                             </p>
                             <p>
                                 My high school robotics team was gifted a workshop space by the city, but the workspace did not have any internet access, which made programming dificult.
-                                However, no internet also made keeping track of who came to build sessions.
+                                However, no internet also made keeping track of who came to build sessions hard, and my teammeates were writing it down on
+                                looseleaf torn from a notebook. They wanted to count the number of hours each student spent at all the build sessions
+                                so they could award students with the most.  
+                                I decided that this was untenable and spent my summer programming a replacement.
                                 I built this application to be used without internet, and I used local storage as a kind of offline database.
+                                As far as I know, they continue to use the platform as a way to track student involvement.
                             </p>
                             <button class="projLangBtn btn btn-outline-light" type="button">HTML</button>
                             <button class="projLangBtn btn btn-outline-light" type="button">CSS</button>
@@ -228,8 +251,11 @@
                         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
                             <p>
                                 My second semester of college, I was in Differential Equations and Linear Algebra. 
-                                There were a lot of matrices and matrix calculations, so I created a program to help me with some of the more tedious calculations.
-                                I never finished programming all the different calculations because there was no real need to do so since I would never need it after the semester
+                                There were a lot of matrices and matrix calculations, so I created a program to help me with some of the more tedious parts of the homework. 
+                                Nerdy, I know. I could have just used online resources, but I didn't want to. I preferred to spend hours 
+                                working through how to build the program, rather than do my math homework. At least I picked the right profession, though.
+                                I never finished programming all the different calculations because there was no real need to do so since the matrix half of the semester ended
+                                and COVID-19 hit America and made my math class 100% easier.
                             </p>
                             <button class="projLangBtn btn btn-outline-light" type="button">Java</button>
                         </div>
@@ -247,12 +273,12 @@
                         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
                             <p>
                                 This was my second and last year as my High School Robotics Team's Programming Lead.
-                                I was one of the only ones on the programming team, so I programmed most of the robot.
+                                I was one of the only ones on the programming team, so I programmed most of the robot (yet again).
                             </p>
                             <p>
                                 This was the first year that we implemented Vision Processing. This was a special project 
                                 that I was very invested in. Vision Processing is when the robot uses a camera and a light
-                                to see where certain things are. The game field had special reflective tape around goals,
+                                to "see" where certain things are. The game field had special reflective tape around goals,
                                 so we used the shapes of the tape to trigger certain automatic actions in the robot.
                                 For instance, the driver could get the robot close to the goal area and press a button, allowing the bot
                                 to automatically line up to the goal.
@@ -285,13 +311,16 @@
                                 I was one of the only ones on the programming team, so I programmed most of the robot.
                                 The robot's name was Bernoulli because we 'Swiss-cheesed' the robot, meaning we cut holes into the metal panelling
                                 so that the robot was under the FRC weight limit, and Bernoulli was a Swiss Mathematician.
+                                The name is a bit of a stretch, but it was that or Quicksilver, because the Marvel movie had just come out 
+                                where Quicksilver got plugged with a bunch of bullets, so Bernoulli it was.
                             </p>
                             <p>
                                 There is a 15 second period at the beginning of every robotics match for automated controls.
                                 I had full control over what the robot was going to do during those 15 seconds.
                                 This particular year was interesting because there were these scales that randomized every match,
                                 which side was your team's side. We wanted to score goal at the beginning of every match, so I
-                                had to make the robot get information and decide where to score.
+                                had to make the robot get that information at the beginning of the match then decide where to score,
+                                and how to maneuver where it needed to be.
                             </p>
                             <button class="projLangBtn btn btn-outline-light" type="button">Java</button>
                         </div>
@@ -307,7 +336,7 @@
 
                 <div class="portfolio-content">
                     <div class="row title-row m-0 pl-3">
-                        <h2>About Operation Spark</h2>
+                        <h2>What is Operation Spark?</h2>
                      </div>
     
                     <div class="row pl-3">
@@ -319,7 +348,7 @@
                             <p>
                                 I took two courses with Operation Spark and earned Level 1 and 2 Industry Based Certifications in the Basics of JavaScript.
                                 The projects below were created during the first course, which took place in the Summer of 2018.
-                                The first course focused on introduction web design, while second course focused more on JavaScript and less on web projects, which is why there are no projects from the second course.
+                                The first course focused on introduction web design, while the second course focused more on JavaScript and less on web projects, which is why there are no projects from the second course.
                             </p>
                         </div>
                     </div>
@@ -361,7 +390,6 @@
                                This project was very fun. Circularity, or Circle Poem, is essentially a calming background of slow moving circles.
                                There are 150 circles of random size and color, and each are moving at a random speed in a random direction.
                                I know that's a lot of random's, but this is probably one of my favorite projects from Operation Spark.
-                               Clicking on circles forces them to speed up and go in the opposite direction.
                             </p>
                             <p>
                                 Clicking on circles forces them to speed up and go in the opposite direction.
@@ -431,6 +459,76 @@
                     </div>
                 </div>
                 
+            </div>
+
+            <div id="jobDiv" style="display: none;">
+
+                <div class="portfolio-content">
+                    <div class="row title-row m-0 pl-3">
+                        <h2>TAG Data Solutions (January 2022 - Present)</h2>
+                        <a href="https://tagdatasolutions.com/" type="button" class="btn btn-outline-light ml-2 a-button">Website</a>
+                    </div>
+    
+                    <div class="row pl-3">
+                        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
+                            <p>
+                                I am a developer on the TAG Team. I work with clients to help build an application
+                                that is useful to them in their daily jobs. 
+                            </p>
+                            <button class="projLangBtn btn btn-outline-light" type="button">HTML</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">CSS</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">JavaScript</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">PHP</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">MySQL</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Bootstrap</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Backbone.js</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="portfolio-content">
+                    <div class="row title-row m-0 pl-3">
+                        <h2>iDTech (Summer 2021)</h2>
+                        <a href="https://www.idtech.com/" type="button" class="btn btn-outline-light ml-2 a-button">Website</a>
+                    </div>
+    
+                    <div class="row pl-3">
+                        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
+                            <p>
+                                I was a teacher at iDTech, and I taught high-school students basic programming concepts
+                                using Java. As this was a remote classroom setting, I learned how to effectively communicate
+                                with students over Zoom and with my managers via online communication conduits. 
+                                These students had never programmed before, so I had to figure out a way to 
+                                explain complex object-oriented concepts to people who have no programming background, 
+                                which is a very useful tool when it comes to talking with non-techs in industry.  
+                            </p>
+                            <p>
+                                Each week I had a new set of about 5-6 students because the class was a week-long summer camp for
+                                the kids. However, the course material wanted to cover everything about programming that gets taught in 
+                                colleges over the course of a semester, or even a year.
+                                Monday was print statements and easy syntax. No problem. 
+                                Except that Wednesday was supposed to be learning about Objects and Classes, and every kid struggled.
+                                Older students struggle with Objects and Classes when they first begin, and trying to explain it all during
+                                a short session to high-school students during a summer break was damn near impossible. 
+                                The next day we were to move on to searching and sorting algorithms, then begin the big 2-day project 
+                                that they were supposed to present to their parents. 
+                            </p>
+                            <p>
+                                My solution to the insane course speed was to teach at the pace the kids understood, while also 
+                                covering the information they needed to finish the project they were given.
+                                I know that these beginner topics sound pretty easy to an experienced programmer, but 
+                                I think it is more important to foster excitement with easier topics that lead to the more advanced ones
+                                than it is to speed through too much information that students feel overwhelmed. 
+                                The intention was to encourage young students to pursue Computer Science, but I fear that 
+                                the fast-paced course and perhaps my underdeveloped teaching skills will deter them from pursuing what
+                                is possibly the most exciting and challenging career path.
+                            </p>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Java</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
 
