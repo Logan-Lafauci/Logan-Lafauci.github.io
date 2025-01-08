@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="style/index.css">
 
-        <title>Hayley Roberts</title>
+        <title>Logan Lafauci</title>
     </head>
     
     <body>
@@ -21,7 +21,6 @@
             function reveal(paneNum){
                 if(paneNum == 1){
                     //Show and hide divs
-                    $('#opSparkProjectsDiv').css('display', 'none');
                     $('#collegeProjectsDiv').css('display', 'block');
                     $('#personalProjectsDiv').css('display', 'none');
                     $('#jobDiv').css('display', 'none');
@@ -32,7 +31,6 @@
 
                 } else if(paneNum == 2){
                     //Show and hide divs
-                    $('#opSparkProjectsDiv').css('display', 'none');
                     $('#collegeProjectsDiv').css('display', 'none');
                     $('#personalProjectsDiv').css('display', 'block');
                     $('#jobDiv').css('display', 'none');
@@ -43,18 +41,7 @@
 
                 } else if(paneNum == 3){
                     //Show and hide divs
-                    $('#opSparkProjectsDiv').css('display', 'block');
-                    $('#collegeProjectsDiv').css('display', 'none');
-                    $('#personalProjectsDiv').css('display', 'none');
-                    $('#jobDiv').css('display', 'none');
-                    
-                    //Activate and deactivate buttons
-                    $('.show-project-button.active').toggleClass('active');
-                    $('#opSparkBtn').addClass('active');
-                } else if(paneNum == 4){
-                    //Show and hide divs
                     $('#jobDiv').css('display', 'block');
-                    $('#opSparkProjectsDiv').css('display', 'none');
                     $('#collegeProjectsDiv').css('display', 'none');
                     $('#personalProjectsDiv').css('display', 'none');
                     
@@ -67,7 +54,7 @@
 
 
         <nav class="navbar sticky-top navbar-light mb-0">
-            <h2>Hayley Roberts</h2>
+            <h2>Logan Lafauci</h2>
             <div class="row">
                 <a class="nav-item m-2" href="index.html"><h4>Home</h4></a>
                 <a class="nav-item m-2" href="portfolio.html"  style="text-decoration:underline;" ><h4>Portfolio</h4></a>
@@ -79,127 +66,80 @@
             <div class="row mt-3 mb-2" style="justify-content: center;">
                 <button type="button" id="collegeBtn" class="btn btn-outline-light active show-project-button" onclick="reveal(1)">College Class Projects</button>
                 <button type="button" id="personalBtn" class="btn btn-outline-light ml-2 show-project-button" onclick="reveal(2)">Personal Projects</button>
-                <button type="button" id="opSparkBtn" class="btn btn-outline-light ml-2 show-project-button" onclick="reveal(3)">Operation Spark Projects</button>
-                <button type="button" id="jobBtn" class="btn btn-outline-light ml-2 show-project-button" onclick="reveal(4)">Job Experience</button>
+                <button type="button" id="jobBtn" class="btn btn-outline-light ml-2 show-project-button" onclick="reveal(3)">Job Experience</button>
             </div>
 
             <div id="collegeProjectsDiv">
 
                 <div class="portfolio-content">
                     <div class="row title-row m-0 pl-3">
-                        <h2>LSU Research (Fall 2020 and Fall/Spring 2021)</h2>
+                        <h2>Shrink'n'Grow (Spring 2022)</h2>
                     </div>
-    
+
                     <div class="row pl-3">
                         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
                             <p>
-                                I did research for a professor at Louisiana State University. The goal of my part of the project was
-                                data gathering from specific websites to use in analysis of the weaknesses and biases prevalent in certain platforms.
-                                I learned to build a web-scraper using Python. I used BeautifulSoup to parse the HTML trees and gather the information I wanted.
-                                Selenium grabbed the HTML of dynamic pages, while the requests library did the same for static pages.
-                                It was my first attempt at web-scraping, and I managed to gather lots of information and stored it in text files.  
+                                This project was developed as part of my CSC 4263 course (Video Game Design). It marked my first
+                                experience working with a game engine and was completed within a short two-week development timeline.
                             </p>
                             <p>
-                                The experience allowed me to use similar techniques to gather movie information for the Moovi application
-                                so we could fill our database quickly and spend more time building our MVP.
+                                The project was developed in Unity, utilizing Microsoft Visual Studio as the IDE and C# as the programming language, 
+                                with Cinemachine as the only imported asset. It was an individual project designed to introduce students to
+                                the Unity game engine, and to allow students to show off their stengths before forming a group.
                             </p>
-                            <button class="projLangBtn btn btn-outline-light" type="button">Python</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">BeautifulSoup</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">Selenium</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">Requests</button>
+                            <p>
+                                Shrink'n'Grow is a 3D third-person puzzle-platformer that revolves around the main mechanic of shrinking and growing
+                                the player character. Inspired by my love for games that masterfully convey a sense of scale, I designed simple puzzles
+                                that challenge players to creatively utilize their size-changing abilities to progress. A key focus during development was
+                                refining the camera controls to ensure smooth and intuitive player navigation, enhancing overall gameplay experience.
+                            </p>
+                            <p>
+                                If I were to return to this project, I would focus on refining the size-changing mechanic to ensure the camera dynamically
+                                adjusts while maintaining consistent relativity to the player's size. Additionally, I would dive deeper into level design,
+                                creating expansive, larger-than-life environments that enhance the sense of scale. Finally, I’d consider introducing new
+                                mechanics and transitioning the player character from a sphere to a more humanoid design to further enrich gameplay.
+                            </p>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Unity</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">C#</button>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                            <video width="736" height="414" controls>
+                                <source src="videos/first-game-demo.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </div>
 
                 <div class="portfolio-content">
                     <div class="row title-row m-0 pl-3">
-                        <h2>Moovi (Fall 2021)</h2>
-                        <a href="https://github.com/BOOKSHayley/Moovi" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
+                        <h2>Echos (Spring 2022)</h2>
+                        <a href="https://flact-studios.github.io/index.html" type="button" class="btn btn-outline-light ml-2 a-button">Website</a>
                         <!-- <button type="button" class="btn btn-outline-light ml-2">Play</button> -->
                     </div>
-    
+
                     <div class="row pl-3">
                         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
                             <p>
-                                This project was created in my CSC 4330 class (AKA Software Systems Development).
-                                I was the Scrum Master for a group of six, and we had one semester to build this project from the group up with a focus on creating an MVP.
+                                Echos was developed by a small team of four developers and one artist as part of our CSC 4263 
+                                (Video Game Design) course. The project had a three-month timeline to propose, design, and develop the game.
                             </p>
                             <p>
-                                The project was made in Android Studio, using Flutter and the Dart Language. 
-                                I created the database using the Floor API, which uses SQLite. 
-                                I gained experience in making a professional UI because my wonderful professor, Dr. Nash, pushed us to continually clean up the look and feel.
+                                Created in Unity, Echos utilized Plastic SCM for version control and collaborative project management.
+                                As one of the developers, my primary focus was on player movement, camera controls, and refining prototype
+                                mechanics. Drawing from my experience as a playtester, I also contributed to bug testing and fixing issues
+                                throughout the development process.
                             </p>
                             <p>
-                                Moovi is a mobile app to help users minimize the amount of time they spend searching for a movie to watch.
-                                With a swipable interface similar to Tinder, users swipe on movies to add them to a watchlist or send them to the back of the line.
-                                One of the more important features is the Friends feature, where users can see a list of movies that they and a friend are both interested in watching.
-                                The UI is intended for speed because we want users to move quickly through the list of movies.
+                                Echos is a third-person 3D puzzle game where players control an adventurer on a quest for treasure within a decaying,
+                                abandoned castle. The adventurer can possess the bodies of long-deceased heroes from the past, altering the course
+                                of a tragic conflict. Each hero brings unique abilities that are vital for solving puzzles, enabling the adventurer
+                                to overcome obstacles and advance through the castle in the present.
                             </p>
-                            <p>
-                                If we continue this project, we would first implement better filtering so users can see movies in genres and streaming services of their choosing.
-                                We would host the database on a server, instead of making the database local to the device, which we did for the purposes of making an MVP for the semester.
-                                The database would need more movies and information so we could make an algorithm to pick movies that might interest each user.
-                            </p>
-                            <button class="projLangBtn btn btn-outline-light" type="button">Dart</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">SQLite</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Unity</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">C#</button>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            <img src="images/moovi-pic-1.png">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="portfolio-content">
-                    <div class="row title-row m-0 pl-3">
-                        <h2>DrugHub (Spring 2021)</h2>
-                        <a href="https://github.com/SamJones329/Medication-Reminder-Android-App" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
-                    </div>
-    
-                    <div class="row pl-3">
-                        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                            <p>
-                                This project was created in my CSC 3380 class (AKA Object Oriented Design).
-                                I was the Implementation Leader for a group of six, and we had one semester to build this project with a focus on good initial design.
-                            </p>
-                            <p>
-                                The project was built in Android studio.
-                                I created the database (my first) using the Room API, which uses SQLite.
-                                I also helped to create an ER Diagram using Enterprise Architecture.
-                            </p>
-                            <p>
-                                DrugHub is an android application for helping users remember to take their medications. 
-                                Users could see a list of upcoming medications and have reminders texted to their phone.
-                                We created a form where users enter information about the medication and when they would like to be reminded. 
-                            </p>
-                            <p>
-                                Because the focus of the project was on early design, we did not get a chance to implement a clean and intuitive UI, so if we were to
-                                complete this project, this would be the first thing to fix. Currently, the information is specific to the user, so keeping the database of 
-                                the user's information local to the device would work. Since medications are private information, we would need to increase the app's security.
-                            </p>
-                            <button class="projLangBtn btn btn-outline-light" type="button">Java</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">SQLite</button>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            <img src="images/drughub-pic.png">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-content">
-                    <div class="row title-row m-0 pl-3">
-                        <h2>Lab Projects  (Fall 2019)</h2>
-                        <a href="https://github.com/BOOKSHayley/LSU_CSC1350" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
-                    </div>
-    
-                    <div class="row pl-3">
-                        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                            <p>
-                                These are projects that I implemented for CSC 1351 (AKA Intro to Computer Science).
-                                They were all written in Java.
-                                The labs were very simple and easy, intended to introduce new programmers to Computer Science.
-                            </p>
-                            <button class="projLangBtn btn btn-outline-light" type="button">Java</button>
+                            <img src="images/echos-pic-1.png">
                         </div>
                     </div>
                 </div>
@@ -207,281 +147,117 @@
             </div>
 
             <div id="personalProjectsDiv" style="display:none">
-                
+
                 <div class="portfolio-content">
                     <div class="row title-row m-0 pl-3">
-                        <h2>Robotics Sign-In  (Summer 2019)</h2>
-                        <a href="https://github.com/BOOKSHayley/BuildSignIn" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
+                        <h2>Logan's Sandbox (Fall 2024)</h2>
+                        <a href="https://github.com/Logan-Lafauci/Logan-s-Sandbox" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
                     </div>
-    
+
                     <div class="row pl-3">
                         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
                             <p>
-                                I created this project after I graduated from High School for my High School Robotics team.
+                                I developed this project to explore and implement some of my favorite game mechanics, with the goal of making them
+                                reusable for future projects.
                             </p>
                             <p>
-                                This project was made in Microsoft Visual Studio Code. This was the first website I built without help from mentors or teammates.
+                                This project is made in Unity 6.
                             </p>
                             <p>
-                                My high school robotics team was gifted a workshop space by the city, but the workspace did not have any internet access, which made programming dificult.
-                                However, no internet also made keeping track of who came to build sessions hard, and my teammeates were writing it down on
-                                looseleaf torn from a notebook. They wanted to count the number of hours each student spent at all the build sessions
-                                so they could award students with the most.  
-                                I decided that this was untenable and spent my summer programming a replacement.
-                                I built this application to be used without internet, and I used local storage as a kind of offline database.
-                                As far as I know, they continue to use the platform as a way to track student involvement.
+                                The first feature I developed for this project was creating seamless portals for an FPS game, inspired by Valve's Portal.
+                                I used a reference video to learn the basics of portal implementation and made modifications to allow portals to function
+                                independently, without needing to be directly linked. This project taught me valuable concepts, including matrix formulas
+                                for calculating relative positions, the fundamentals of UV texture mapping, and an introduction to shader programming.
                             </p>
-                            <button class="projLangBtn btn btn-outline-light" type="button">HTML</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">CSS</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">JavaScript</button>
+                            <p>
+                                For future development, I plan to explore additional game mechanics inspired by some of my favorites, such as wall running,
+                                seamless vehicle entry and exit, melee combat, and designing an RPG-style leveling system, among others.
+                            </p>
+                            <button class="projLangBtn btn btn-outline-light" type="button">C#</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Unity 6</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Github</button>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            <img src="images/robotics-signin-pic.png">
+                            <video width="736" height="414" controls>
+                                <source src="videos/logan-sandbox-1.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </div>
 
                 <div class="portfolio-content">
                     <div class="row title-row m-0 pl-3">
-                        <h2>Matrix Calculator  (Spring 2020)</h2>
-                        <a href="https://github.com/BOOKSHayley/MatrixCalc/tree/master/src/matrixCalc" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
+                        <h2>Cave Has Eyes (Winter 2024)</h2>
                     </div>
-    
+
                     <div class="row pl-3">
                         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
                             <p>
-                                My second semester of college, I was in Differential Equations and Linear Algebra. 
-                                There were a lot of matrices and matrix calculations, so I created a program to help me with some of the more tedious parts of the homework. 
-                                Nerdy, I know. I could have just used online resources, but I didn't want to. I preferred to spend hours 
-                                working through how to build the program, rather than do my math homework. At least I picked the right profession, though.
-                                I never finished programming all the different calculations because there was no real need to do so since the matrix half of the semester ended
-                                and COVID-19 hit America and made my math class 100% easier.
+                                This is a collaborative project with my partner, aimed at learning Unreal Engine, exploring common JRPG mechanics,
+                                and experimenting with a mysterious and horrific setting.
                             </p>
-                            <button class="projLangBtn btn btn-outline-light" type="button">Java</button>
+                            <p>
+                                This project is being developed in Unreal Engine 5, with GitHub used for version control and collaboration.
+                            </p>
+                            <p>
+                                This project is currently in the early stages of development, with the setting and theme being the most developed
+                                aspects so far. The game will feature Lovecraftian horror elements and an overarching sense of mystery. Its core
+                                gameplay will revolve around turn-based strategy, with a leveling system based on completing events rather than
+                                grinding experience from defeating enemies. Outside of combat, players will engage in 3D exploration, with a strong
+                                emphasis on items and quests to drive progression.
+                            </p>
+                            <button class="projLangBtn btn btn-outline-light" type="button">C++</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Blueprints</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Unreal 5</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Github</button>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5" style="margin-top: -40px">
+                            <img src="images/bloodborne.png" style="height:90%">
+                            <p>Bloodborne: The Old Hunters. Directed by Hidetaka Miyazaki, Sony, 2015. Sony Playstation 4 game</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-content">
-                    <div class="row title-row m-0 pl-3">
-                        <h2>StarLord (2019)</h2>
-                        <a href="https://github.com/FRCTeam2992/StarLord2019" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
-                        <a href="https://www.youtube.com/watch?v=Eiw2tlBrdqo" type="button" class="btn btn-outline-light ml-2 a-button">Reveal Video</a>
-                    </div>
-    
-                    <div class="row pl-3">
-                        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                            <p>
-                                This was my second and last year as my High School Robotics Team's Programming Lead.
-                                I was one of the only ones on the programming team, so I programmed most of the robot (yet again).
-                            </p>
-                            <p>
-                                This was the first year that we implemented Vision Processing. This was a special project 
-                                that I was very invested in. Vision Processing is when the robot uses a camera and a light
-                                to "see" where certain things are. The game field had special reflective tape around goals,
-                                so we used the shapes of the tape to trigger certain automatic actions in the robot.
-                                For instance, the driver could get the robot close to the goal area and press a button, allowing the bot
-                                to automatically line up to the goal.
-                            </p>
-                            <p>
-                                At the end of every match, there was a goal to lift your robot onto different leveled boxes.
-                                Our robot had completely automated climbing because there were 2 motors that lifted the robot. 
-                                This meant that a person would struggle to keep the robot level,
-                                but I programmed a way for the robot to measure the angle and change motor speed on either side to keep the robot upright.
-                            </p>
-                            <button class="projLangBtn btn btn-outline-light" type="button">Java</button>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            <img src="images/starlord.png">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-content">
-                    <div class="row title-row m-0 pl-3">
-                        <h2>Bernoulli (2018)</h2>
-                        <a href="https://github.com/FRCTeam2992/Bernoulli2018" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
-                        <a href="https://www.youtube.com/watch?v=6CpoUIV_2lc" type="button" class="btn btn-outline-light ml-2 a-button">Reveal Video</a>
-                    </div>
-    
-                    <div class="row pl-3">
-                        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                            <p>
-                                This was my first year as my High School Robotics Team's Programming Lead.
-                                I was one of the only ones on the programming team, so I programmed most of the robot.
-                                The robot's name was Bernoulli because we 'Swiss-cheesed' the robot, meaning we cut holes into the metal panelling
-                                so that the robot was under the FRC weight limit, and Bernoulli was a Swiss Mathematician.
-                                The name is a bit of a stretch, but it was that or Quicksilver, because the Marvel movie had just come out 
-                                where Quicksilver got plugged with a bunch of bullets, so Bernoulli it was.
-                            </p>
-                            <p>
-                                There is a 15 second period at the beginning of every robotics match for automated controls.
-                                I had full control over what the robot was going to do during those 15 seconds.
-                                This particular year was interesting because there were these scales that randomized every match,
-                                which side was your team's side. We wanted to score goal at the beginning of every match, so I
-                                had to make the robot get that information at the beginning of the match then decide where to score,
-                                and how to maneuver where it needed to be.
-                            </p>
-                            <button class="projLangBtn btn btn-outline-light" type="button">Java</button>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            <img src="images/bernoulli.png">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div id="opSparkProjectsDiv" style="display:none">
-
-                <div class="portfolio-content">
-                    <div class="row title-row m-0 pl-3">
-                        <h2>What is Operation Spark?</h2>
-                     </div>
-    
-                    <div class="row pl-3">
-                        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                            <p>
-                               Operation Spark is an initiative to help young students from Louisiana learn HTML, CSS, and JavaScript 
-                               and boost them into Computer Science.
-                            </p>
-                            <p>
-                                I took two courses with Operation Spark and earned Level 1 and 2 Industry Based Certifications in the Basics of JavaScript.
-                                The projects below were created during the first course, which took place in the Summer of 2018.
-                                The first course focused on introduction web design, while the second course focused more on JavaScript and less on web projects, which is why there are no projects from the second course.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-content">
-                    <div class="row title-row m-0 pl-3">
-                        <h2>Bouncing Box  (Summer 2018)</h2>
-                        <a href="https://github.com/BOOKSHayley/BOOKSHayley.github.io/tree/master/projects/bouncing-box" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
-                        <a href="projects/bouncing-box/index.html" type="button" class="btn btn-outline-light ml-2 a-button">Play</a>
-                    </div>
-    
-                    <div class="row pl-3">
-                        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                            <p>
-                               This project was my first web game. It is a simple clicker game, where you click on the moving box to increase the number of
-                               points. Each click changes the color of the box, where the box starts from, and the speed of the box.
-                            </p>
-                            <button class="projLangBtn btn btn-outline-light" type="button">HTML</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">CSS</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">JavaScript</button>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            <img src="images/bouncing-box.png">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-content">
-                    <div class="row title-row m-0 pl-3">
-                        <h2>Circularity</h2>
-                        <a href="https://github.com/BOOKSHayley/BOOKSHayley.github.io/tree/master/projects/circularity" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
-                        <a href="projects/circularity/index.html" type="button" class="btn btn-outline-light ml-2 a-button">Play</a>
-                    </div>
-    
-                    <div class="row pl-3">
-                        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                            <p>
-                               This project was very fun. Circularity, or Circle Poem, is essentially a calming background of slow moving circles.
-                               There are 150 circles of random size and color, and each are moving at a random speed in a random direction.
-                               I know that's a lot of random's, but this is probably one of my favorite projects from Operation Spark.
-                            </p>
-                            <p>
-                                Clicking on circles forces them to speed up and go in the opposite direction.
-                                Try spam-clicking one of the circles; it's very enjoyable.
-                            </p>
-
-                            <button class="projLangBtn btn btn-outline-light" type="button">HTML</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">CSS</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">JavaScript</button>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            <img src="images/circularity.png">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-content">
-                    <div class="row title-row m-0 pl-3">
-                        <h2>Runtime</h2>
-                        <a href="https://github.com/BOOKSHayley/BOOKSHayley.github.io/tree/master/projects/runtime" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
-                        <a href="projects/runtime/" type="button" class="btn btn-outline-light ml-2 a-button">Play</a>
-                    </div>
-    
-                    <div class="row pl-3">
-                        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                            <p>
-                                This was my absolute favorite project from Operation Spark. It was the final project for the course, and I worked on it
-                                with my two best friends. Runtime a side-scroller game. 
-                                The player character, Hallebot, is an asset from Operation Spark, but all of the other visuals and effects were 
-                                designed by my friend in Microsoft Paint. The three girls in the pirate ship in the background is a cameo of me and my friends.
-                            </p>
-                            <p>
-                                We decided to go with a pirate theme.
-                                Hallebot is running on a neverending pirate ship, dodging cannons and flying swords.
-                                You have to shoot robot pirates, and collect coins and health for as long as you can.
-                                If you press q, there is a self-destruct. 
-                            </p>
-                            <button class="projLangBtn btn btn-outline-light" type="button">HTML</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">CSS</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">JavaScript</button>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            <img src="images/runtime.png">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-content">
-                    <div class="row title-row m-0 pl-3">
-                        <h2>Platformer</h2>
-                        <a href="https://github.com/BOOKSHayley/BOOKSHayley.github.io/tree/master/projects/platformer" type="button" class="btn btn-outline-light ml-2 a-button">Repository</a>
-                        <a href="projects/platformer/" type="button" class="btn btn-outline-light ml-2 a-button">Play</a>
-                    </div>
-    
-                    <div class="row pl-3">
-                        <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
-                            <p>
-                                This was my first platformer game. All the assets are from Operation Spark.
-                            </p>
-                            <button class="projLangBtn btn btn-outline-light" type="button">HTML</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">CSS</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">JavaScript</button>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            <img src="images/platformer.png">
-                        </div>
-                    </div>
-                </div>
-                
             </div>
 
             <div id="jobDiv" style="display: none;">
 
                 <div class="portfolio-content">
                     <div class="row title-row m-0 pl-3">
-                        <h2>TAG Data Solutions (January 2022 - Present)</h2>
-                        <a href="https://tagdatasolutions.com/" type="button" class="btn btn-outline-light ml-2 a-button">Website</a>
+                        <h2>Pixel Dash Studios (Febuary 2023 - November 2024)</h2>
+                        <a href="https://www.pixeldashstudios.com" type="button" class="btn btn-outline-light ml-2 a-button">Website</a>
                     </div>
-    
+                    <div class="row title-row m-0 pl-3">
+                        <h4><i>Junior Software Engineer</i></h4>        
+                    </div>
+
                     <div class="row pl-3">
                         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
                             <p>
-                                I am a developer on the TAG Team. I work with clients to help build an application
-                                that is useful to them in their daily jobs. 
+                                Working at Pixel Dash Studios marked my first experience as a developer in the video game industry.
+                                I began as an intern during my final semester of college, balancing a 20-hour work week alongside my
+                                coursework. During my time at Pixel Dash Studios, I had the opportunity to collaborate with talented
+                                engineers and designers who shared their expertise and insights into game design and development.
                             </p>
-                            <button class="projLangBtn btn btn-outline-light" type="button">HTML</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">CSS</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">JavaScript</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">PHP</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">MySQL</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">Bootstrap</button>
-                            <button class="projLangBtn btn btn-outline-light" type="button">Backbone.js</button>
+                            <p>
+                                I worked as a Junior Software Engineer at Pixel Dash Studios for approximately two years, where I
+                                gained professional experience as a game developer. I collaborated with a cross-functional, medium-sized
+                                team of designers, artists, and engineers and also took on the role of the sole engineer for an in-house
+                                project using the Unity engine. My responsibilities included designing and implementing core gameplay
+                                features such as AI behavior, UI systems, camera controls, combat mechanics, player movement, shop systems,
+                                controller inputs, and local co-op gameplay. Additionally, I identified, reported, and resolved bugs to enhance
+                                the game's overall quality and player experience. I also participated in daily scrum meetings to to talk about progress
+                                and to give me the oppurtunity to reach out if I encountered any blockers.
+                            </p>
+                            <button class="projLangBtn btn btn-outline-light" type="button">C#</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Unity</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">TortoiseSVN</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Github</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Slack</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Jira</button>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5" style="display:flex; justify-content:center">
+                            <img src="images/PixelDash_Icon_FullColor.png" style="width : 200px; height:200px">
                         </div>
                     </div>
                 </div>
@@ -489,42 +265,34 @@
 
                 <div class="portfolio-content">
                     <div class="row title-row m-0 pl-3">
-                        <h2>iDTech (Summer 2021)</h2>
-                        <a href="https://www.idtech.com/" type="button" class="btn btn-outline-light ml-2 a-button">Website</a>
+                        <h2>Electronic Arts (Summer 2021, May 2022 - Feb. 2023)</h2>
+                        <a href="https://www.ea.com" type="button" class="btn btn-outline-light ml-2 a-button">Website</a>
                     </div>
-    
+
+                    <div class="row title-row m-0 pl-3">
+                        <h4><i>Quality Assurance Tester</i></h4>
+                    </div>
+
                     <div class="row pl-3">
                         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
                             <p>
-                                I was a teacher at iDTech, and I taught high-school students basic programming concepts
-                                using Java. As this was a remote classroom setting, I learned how to effectively communicate
-                                with students over Zoom and with my managers via online communication conduits. 
-                                These students had never programmed before, so I had to figure out a way to 
-                                explain complex object-oriented concepts to people who have no programming background, 
-                                which is a very useful tool when it comes to talking with non-techs in industry.  
+                                Working at Electronic Arts provided me with my first experience in the game industry. I gained insight
+                                into how the development process is managed for large-scale teams by testing new game versions daily.
+                                I also developed skills in understanding and navigating comprehensive documentation to accurately test
+                                and verify game features and mechanics.
                             </p>
                             <p>
-                                Each week I had a new set of about 5-6 students because the class was a week-long summer camp for
-                                the kids. However, the course material wanted to cover everything about programming that gets taught in 
-                                colleges over the course of a semester, or even a year.
-                                Monday was print statements and easy syntax. No problem. 
-                                Except that Wednesday was supposed to be learning about Objects and Classes, and every kid struggled.
-                                Older students struggle with Objects and Classes when they first begin, and trying to explain it all during
-                                a short session to high-school students during a summer break was damn near impossible. 
-                                The next day we were to move on to searching and sorting algorithms, then begin the big 2-day project 
-                                that they were supposed to present to their parents. 
+                                I worked as a Quality Assurance Tester at Electronic Arts during the summers of 2021 and from May 2022 to February 2023,
+                                where I gained my first experience in the game industry. At EA, I developed comprehensive manual bug testing and reporting
+                                skills, providing detailed reproduction steps and contextual information to streamline issue resolution for designers and
+                                developers. Working with a large-scale team of over one hundred testers on a live-service game, I executed systematic
+                                testing to ensure stability and quality.I used Jira to log and track bugs, ensuring clear communication between me 
+                                and the developers.
                             </p>
-                            <p>
-                                My solution to the insane course speed was to teach at the pace the kids understood, while also 
-                                covering the information they needed to finish the project they were given.
-                                I know that these beginner topics sound pretty easy to an experienced programmer, but 
-                                I think it is more important to foster excitement with easier topics that lead to the more advanced ones
-                                than it is to speed through too much information that students feel overwhelmed. 
-                                The intention was to encourage young students to pursue Computer Science, but I fear that 
-                                the fast-paced course and perhaps my underdeveloped teaching skills will deter them from pursuing what
-                                is possibly the most exciting and challenging career path.
-                            </p>
-                            <button class="projLangBtn btn btn-outline-light" type="button">Java</button>
+                            <button class="projLangBtn btn btn-outline-light" type="button">Jira</button>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5" style="display:flex; justify-content:center">
+                            <img src="images/Electronic-Arts-Logo.png" style="width : 200px; height:200px">
                         </div>
                     </div>
                 </div>
@@ -533,27 +301,22 @@
 
 
             <!-- Contact -->
-            <div class="contact mb-0">
+            <div class="contact">
                 <h1>Contact</h1>
 
-                <div class="row">
-                    <div class="col ml-0" style="display: flex;">
-                        <span class="material-icons m-0">email</span> 
-                        <p class="ml-1">hayley.roberts39@ymail.com</p>
+                <div class="row" style="justify-content: space-evenly">
+                    <div class="col-auto ml-0" style="display: flex;">
+                        <span class="material-icons m-0">email</span>
+                        <p class="ml-1">loganlafauci@gmail.com</p>
                     </div>
 
-                    <div class="col ml-0" style="display: flex;">
-                        <span class="material-icons m-0">email</span> 
-                        <p class="ml-1">hrobe39@lsu.edu</p>
-                    </div>
-
-                    <div class="col ml-0" style="display: flex;">
+                    <div class="col-auto ml-0" style="display: flex;">
                         <svg id="i-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="32" height="32">
                             <path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z"></path>
-                        </svg> 
-                        <a href="https://github.com/BOOKSHayley"><p class="ml-1" style="color: #fff;">BOOKSHayley</p></a>
+                        </svg>
+                        <a href="https://github.com/Logan-Lafauci"><p class="ml-1" style="color: #fff;">Logan-Lafauci</p></a>
                     </div>
-                </div>    
+                </div>
             </div>
         
         </div>
