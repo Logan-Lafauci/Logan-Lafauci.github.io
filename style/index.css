@@ -1,9 +1,13 @@
 body {
     background-color: #38405c;
     /* background: linear-gradient(to bottom right, #8860D0, #5680E9, #84CEEB, #5AB9EA, #C1C8E4, #8860D0); */
-    background: linear-gradient(to bottom right, #8860D0, #5680E9,#5AB9EA, #8860D0);
+    background: linear-gradient(to bottom, #231813 30%, #541d16 40%, #a63328 75%, #dd7123 98%, #231813);
     background-attachment: fixed;
     margin-bottom: -10px;
+}
+
+p {
+    font-size: 18px;
 }
 
 /* navigation menu */
@@ -14,7 +18,7 @@ nav {
     padding: 10px;
     justify-content: space-between;
     color: #fff;
-    background-color:#5AB9EA;
+    background-color: rgba(35, 24, 19, .99);
 }
 
 nav a {
@@ -28,7 +32,7 @@ nav a:hover {
 /* main container area beneath menu */
 
 .content {
-    background-color: rgba(58, 41, 89, 0.6);
+    background-color: rgba(19, 35, 35, 0.55);
     color: #fff;
     padding: 15px;
     margin-bottom: 10px;
@@ -38,7 +42,7 @@ nav a:hover {
 }
 
 .contact {
-    background-color: rgba(58, 41, 89, 0.6);
+    background-color: rgba(19, 35, 35, 0.55);
     color: #fff;
     padding: 15px;
     margin-bottom: 10px;
@@ -59,7 +63,7 @@ nav a:hover {
 }
 
 .portfolio-content {
-    background-color: rgba(58, 41, 89, 0.6);
+    background-color: rgba(19, 35, 35, 0.55);
     color: #fff;
     margin-bottom: 10px;
     padding: 10px;
